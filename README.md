@@ -305,3 +305,45 @@ The [`launch`](./launch/) and [`sample_nodes`](./sample_nodes/) folders contain 
 * `text_to_speech.py`: script to continuously try out Vector's voice synthesizer, converting user input text to speech
 * `animate.py`: showcase animation sequence where Vector moves its forklift up and down, drives off its base, says hello, and changes its eye color
 * `math_demo.py`: Vector asks several simple math questions and responds to the user accordingly. Relies the computer's microphone and an internet connection for audio input/recognition. [Click here](https://drive.google.com/file/d/17Zbq8zSnWRLT9JR43gHkNIH8i1KcZ3vu/view?usp=sharing) for a video demo!
+
+
+
+## My setup
+
+# Vector2.0_ROS
+
+!!! Make sure you are on the same wifi network
+
+## Create Virtual Environment
+$ sudo apt-get install python3-venv
+
+$ python3 -m venv venv
+
+$ source venv/bin/activate
+
+$ sudo apt-get update
+
+$ sudo apt-get install python3
+
+$ sudo apt install python3-pip
+
+$ sudo apt-get install python3-pil.imagetk
+
+$ python3 -m pip install --user anki_vector
+	Possible error: No module name 'setuptools_rust'
+
+	$ python -m ensurepip --upgrade
+	$ python -m pip install --upgrade pip
+	$ python3 -m pip install anki_vector
+
+$ python3 -m anki_vector.configure
+
+	enter credentials
+	
+	This will generate sdk_config.ini
+
+### May have to install additional packages
+
+$ pip install pyyaml
+
+$ pip install rospkg
