@@ -347,3 +347,7 @@ $ python3 -m anki_vector.configure
 $ pip install pyyaml
 
 $ pip install rospkg
+
+$ pip install opencv-python
+
+$ sudo apt-get install ros-noetic-cv-bridge
