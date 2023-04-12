@@ -351,3 +351,8 @@ $ pip install rospkg
 $ pip install opencv-python
 
 $ pip install protobuf==3.20.*
+
+
+Be sure to run terminal as sudo user
+$ sudo -s
+$ rosrun anki_vector_ros vector_teleop.py
