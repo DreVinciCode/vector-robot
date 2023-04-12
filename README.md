@@ -350,4 +350,4 @@ $ pip install rospkg
 
 $ pip install opencv-python
 
-$ sudo apt-get install ros-noetic-cv-bridge
+$ pip install protobuf==3.20.*
