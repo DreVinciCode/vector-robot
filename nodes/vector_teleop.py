@@ -24,19 +24,27 @@ from behavior import Behavior
 
 rospy.init_node('Vector_Teleop')
 
-response_pub = rospy.Publisher("/behavior/drive_straight", Dist, queue_size=10)
+drive_pub = rospy.Publisher("/behavior/drive_straight", Dist, queue_size=10)
+turn_pub = rospy.Publisher("/behavior/turn_in_place", Float32, queue_size=10)
 
+print("Ready to teleop!")
 
 while True:
     if keyboard.read_key() == 'i':
-        print("i  pressed...")
         test = Dist()
-
         test.distance = float(100)
         test.speed = float(50)
-        response_pub.publish(test)
+        drive_pub.publish(test)
+
+    if keyboard.read_key() == ',':
+        test = Dist()
+        test.distance = float(-100)
+        test.speed = float(50)
+        drive_pub.publish(test)
 
     if keyboard.read_key() == 'j':
-        print("j  pressed...")
+        turn_pub.publish(float(1.57))
 
+    if keyboard.read_key() == 'l':
+        turn_pub.publish(float(-1.57))
 
