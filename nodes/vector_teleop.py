@@ -12,9 +12,6 @@ from anki_vector_ros.msg import Dist, Pose, Color, Response
 
 from behavior import Behavior
 
-
-
-
 # self.response_pub = Publisher("/behavior/response", Response, queue_size=10)
 # def drive_straight(self, msg):
 #     dist = anki_vector.util.distance_mm(msg.distance)
@@ -31,6 +28,7 @@ print("Ready to teleop!")
 
 while True:
     if keyboard.read_key() == 'i':
+        print("pressed i")
         test = Dist()
         test.distance = float(100)
         test.speed = float(50)
